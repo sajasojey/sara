@@ -4,14 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <!-- boot strap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" >
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-   
     <title>CASE IN CHINA</title>
     <style>
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: red;
+}
+
+.active {
+  background-color: red;
+}
 
         *{
             padding: 0;
@@ -22,7 +44,7 @@
         body
         {
             background: #fefefe;
-            font-family: sans-serif;
+            font-family: 'Playfair Display', serif;
         }
 
 
@@ -36,12 +58,13 @@
         .print
         {
             font-family: 'Playfair Display', serif;
-            margin-left: 1%;
+            margin : 10px;
+            padding: 10px;
         }
 
         .container
         {
-            width: 80%;
+            width: 90%;
             margin: 50px auto;
         }
 
@@ -55,14 +78,11 @@
 
         .card
         {
-            width: 60%;
-            background-color: #fff;
+            width: 50%;
+           background-color: #fff;
             border: 1px solid #ccc;
             margin-bottom: 50px;
             transition: 0.3s;
-            position: absolute;
-            top: 80%;
-            left: 20%;
         }
 
        
@@ -71,7 +91,6 @@
         {
             text-align: center;
             padding: 50px 10px;
-            color: rgb(0, 0, 0);
             background: linear-gradient(to right, #ff416c, #ff4b2b);
         }
 
@@ -79,10 +98,9 @@
         {
             padding: 30px 20px;
             text-align: center;
-            font-size: 18px;
+            font-size: 25px;
         }
 
-        
         .btn
         {
             display: block;
@@ -98,6 +116,16 @@
         {
             transform: scale(1.05);
             box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+        }
+
+
+
+        .row
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-flow: wrap;
         }
 
         @media screen and (max-width: 1000px)
@@ -125,10 +153,11 @@
             .card 
             {
                 width: 80%;
-                left: 7%;
+                
             }
         }
-
+        
+        
     </style>
 
 </head>
@@ -136,44 +165,34 @@
 
     <div class="jumbotron text-center" style="margin-bottom:0">
       
-      </div>
-      
-      <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>                        
-            </button>
-          </div>
-          <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">HOME</a></li>
-              <li><a href="#">NEW SYMPTOMS</a></li>
-              <li><a href="#">INFORMATION</a></li>
-              <li><a href="#">PROTECTION</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+    </div>
+
+    <ul>
+        <li><a class="active" href="sara.html" method="POST">HOME</a></li>
+        <li><a  href="nin.html" method="POST">NEW INFORMATION</a></li>
+        <li><a href="nsy.html" method="POST">SYMPTOMS</a></li>
+        <li><a href="prot.html" method="POST">PROTECTION</a></li>
+      </ul>
 
       <h1 class="print">COVID-19</h1>
 
       <div class="container">
-        <div class="headding">
-            <h1>COVID-19 map: Tracking the coronavirus outbreak worldwide</h1>
-        </div>
+          <div class="headding">
+              <h1 style="font-size: 30px;">COVID-19 map: Tracking the coronavirus outbreak worldwide</h1>
+          </div>
+          <div class="row">
+
             <div class="card">
                 <div class="card-header">
-                  <h1 style="color: #fff;">CHINA</h1>
+                    <h1 style="color: #fff;">CHINA</h1>
                 </div>
                 <div class="card-body">
-                  <p>The number of Confirmed cases : 83,618 </br>The number of  Reported deaths : 4,634 </br> (2020/07/09) </br> THANK YOU FOR USE MY SITE</p>
-                    <a href="sara.html" method="POST" class="btn">Read more</a>
+                    <p >The number of Confirmed cases : 83,618 </br>The number of  Reported deaths : 4,634 </br> (2020/07/09) </br> THANK YOU FOR USE MY SITE</p>
+                    <a href="sara.html" method="POST" class="btn">GO BACK</a>
                 </div>
             </div>
+
+          </div>
       </div>
-      
-    </body>
-    </html>
+</body>
+</html>
